@@ -25,6 +25,7 @@ A biblioteca trava propositalmente o código até que você conecte-se a sua red
 
 
 
+
 Se a conexão for estabelecida, o ESP8266 irá parar de piscar.
 
 Se a conexão não for estabelecida, o ESP8266 continuara piscando lentamente.
