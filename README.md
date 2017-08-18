@@ -24,6 +24,7 @@ A biblioteca trava propositalmente o código até que você conecte-se a sua red
 5-) Selecione sua rede na lista disponível, digite a senha e clique em conectar. O ESP8266 começara piscar rapidamente enquanto estabelece a conexão. *Se não houver senha, deixe em branco*
 
 Se a conexão for estabelecida, o ESP8266 irá parar de piscar.
+
 Se a conexão não for estabelecida, o ESP8266 continuara piscando lentamente.
 
 
