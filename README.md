@@ -17,7 +17,7 @@ A biblioteca trava propositalmente o código até que você conecte-se a sua red
 
 3-) Ao ligar o ESP8266 com a biblioteca, será criado uma rede "WiFi_Manager" sem senha, conecte-se a ela.
 
-3-) Instale o aplicativo em seu Android. http://www.mediafire.com/file/c65034bioe49du0/espManager1.1.apk
+3-) Instale o aplicativo em seu Android. (LINK)
 
 4-) Após conectar-se a rede e instalar o aplicativo, clique em REFRESH e aguarde alguns segundos, o aplicativo irá parecer travado até no máximo 10 segundos em caso de erro com a comunicação.
 
