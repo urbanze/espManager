@@ -21,7 +21,7 @@ A biblioteca trava propositalmente o código até que você conecte-se a sua red
 
 4-) Após conectar-se a rede e instalar o aplicativo, clique em REFRESH e aguarde alguns segundos, o aplicativo irá parecer travado até no máximo 10 segundos em caso de erro com a comunicação.
 
-5-) Selecione sua rede na lista disponível, digite a senha e clique em conectar. O ESP8266 começara piscar rapidamente enquanto estabelece a conexão. *Se não houver senha, deixe em branco*
+5-) Selecione sua rede na lista disponível, digite a senha e clique em conectar. O ESP8266 começara piscar rapidamente enquanto estabelece a conexão. *Se não houver senha, deixe em branco*.
 
 
 
