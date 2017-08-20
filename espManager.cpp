@@ -1,4 +1,10 @@
 #include <espManager.h>
+#ifdef  ARDUINO_ESP8266_ESP01
+#define LED 1
+#elif ARDUINO_ESP8266_NODEMCU
+#define LED D4         
+#endif 
+
 
 WiFiUDP udp;
 
@@ -6,7 +12,7 @@ WiFiUDP udp;
 
 void espManager::begin()
 {
-	pinMode(D4, OUTPUT);
+	pinMode(LED, OUTPUT);
 	name = ""; pass = ""; req = "";
 	WiFi.mode(WIFI_AP_STA);
 	WiFi.disconnect();
@@ -17,7 +23,7 @@ void espManager::begin()
 	{
 		if (millis() - lm > 500)
 		{
-			GPO ^= 1 << D4;
+			GPO ^= 1 << LED;
 			lm = millis();
 		}
 
@@ -54,6 +60,7 @@ void espManager::begin()
 			{
 				int x = 0;
 				
+				
 				if		(pass.length() > 5 && name.length() > 5)
 				{
 					WiFi.begin(name.c_str(), pass.c_str());
@@ -72,14 +79,11 @@ void espManager::begin()
 				while (WiFi.status() != WL_CONNECTED)
 				{
 					x++;
-					GPO ^= 1 << D4;
+					GPO ^= 1 << LED;
 					delay(100);
 
 					if (x > 49)
 					{
-						udp.beginPacket(udp.remoteIP(), 1200);
-						udp.print("FAIL CONNECT");
-						udp.endPacket();
 						break;
 					}
 
@@ -114,6 +118,5 @@ void espManager::begin()
 	udp.stop();
 	WiFi.softAPdisconnect();
 	WiFi.mode(WIFI_STA);
-	digitalWrite(D4, 0);
-	pinMode(D4, INPUT);
+	digitalWrite(LED, 0);
 }
